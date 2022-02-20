@@ -18,7 +18,7 @@ uint64_t nPrime(uint64_t n) {
   int d, k, value;
   bool flag = true;
   value = 2;
-  for (k = 0 ;n != k ; ) {
+  for (k = 0; n != k; ) {
     for (d = 2; d * d <= value; d++) {
       if (value % d == 0) {
         flag = false;
@@ -59,7 +59,7 @@ uint64_t sumPrime(uint64_t hbound) {
         }
       }
     }
-  for (i = 0;i < hbound;i++) {
+  for (i = 0; i < hbound; i++) {
     if (resh[i])
       s += i;
   }
