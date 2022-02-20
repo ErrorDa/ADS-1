@@ -57,10 +57,10 @@ uint64_t nextPrime(uint64_t value) {
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-  int d, k, i, s;
+  uint64_t d, k, i, s;
   s = 0;
-  int* resh;
-  resh = new int[hbound];
+  uint64_t* resh;
+  resh = new uint64_t[hbound];
   resh[1] = 0;
   for (i = 2; i <= hbound; i++)
     resh[i] = 1;
