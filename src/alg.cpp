@@ -34,26 +34,15 @@ uint64_t nPrime(uint64_t n) {
 }
 
 uint64_t nextPrime(uint64_t value) {
-  int d, value_copy, delt;
+  int d;
   value += 1;
-  value_copy = value - 2;
     for (d = 2; d * d <= value; d++) {
       if (value % d == 0) {
         value += 1;
         d = 1;
       }
     }
-  delt = value - value_copy - 1;
-  for (d = 2; d * d <= value_copy; d++) {
-    if (value_copy % d == 0) {
-      value_copy -= 1;
-      d = 1;
-    }
-  }
-  if (delt < (value + 1 - value_copy - delt))
     return value;
-  else
-    return value_copy;
 }
 
 uint64_t sumPrime(uint64_t hbound) {
